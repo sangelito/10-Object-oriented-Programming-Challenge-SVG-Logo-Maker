@@ -1,1 +1,1 @@
-# 10-Object-oriented-Programming-Challenge-SVG-Logo-Maker
+# 10-SVG-Logo-Maker
