@@ -15,6 +15,23 @@ function writeToFile(fileName, answers){
     svgString += "<g>";
     // Takes shape input and inserts it into SVG file
     svgString += `${answers.shape}`;
+    // conditional takes inputs and adds to SVG String
+  let shapeChoice;
+  if (answers.shape === "Triangle") {
+    shapeChoice = new Triangle();
+    svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
+  } else if (answers.shape === "Square") {
+    shapeChoice = new Square();
+    svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
+  } else {
+    shapeChoice = new Circle();
+    svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
+  }
+
+  // generate svg file prompts message below or error message
+  fs.writeFile(fileName, svgString, (err) => {
+    err ? console.log(err) : console.log("Generated logo.svg");
+  });
 }
 
 // Inquirer prompt to to prompt user to answer q's in command line 
