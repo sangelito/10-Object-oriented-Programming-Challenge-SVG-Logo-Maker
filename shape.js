@@ -23,4 +23,11 @@ class Square extends Shape {
       return `<rect x="73" y="40" width="160" height="160" fill="${this.color}" />`;
     }
   }
+    // Circle class inherits properties defined in Shape class
+class Circle extends Shape {
+    render() {
+      // Returns circle with color input
+      return `<circle cx="150" cy="115" r="80" fill="${this.color}" />`;
+    }
+  }
   
