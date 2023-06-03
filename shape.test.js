@@ -11,3 +11,24 @@ describe('purple Triangle test', () => {
         );
     });
 });
+
+// case test for blue square 
+describe('blue Square test', () => {
+    test("test for a blue square", () => {
+        const shape = new Square(); 
+        shape.setColor("blue")
+        expect(shape.render()).toEqual(
+            '<rect x="73" y="40" width="160" height="160" fill="blue" />'
+        );
+    });
+});
+// case test for green circle 
+describe('green circle test', () => {
+    test("test for a green circle", () => {
+        const shape = new Circle(); 
+        shape.setColor("green")
+        expect(shape.render()).toEqual(
+            '<circle cx="150" cy="115" r="80" fill="green" />'
+        );
+    });
+});
