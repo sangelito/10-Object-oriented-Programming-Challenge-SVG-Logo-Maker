@@ -19,6 +19,9 @@
   "homepage": "https://github.com/sangelito/10-Object-oriented-Programming-Challenge-SVG-Logo-Maker#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
+    "jess": "^1.0.8-alpha.8"
+  },
+  "devDependencies": {
     "jest": "^29.5.0"
   }
 }
